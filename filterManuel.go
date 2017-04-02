@@ -7,7 +7,10 @@ var (
 	sectionHeader = regexp.MustCompile(`^\[[A-Z]+.*\]$`)
 )
 
-func ShouldCopy(s string, allowed []string) bool {
-	_ = allowed
-	return sectionSeparator.MatchString(s) || sectionHeader.MatchString(s)
+func ShouldCopy(s string, allowed map[string]struct{}) bool {
+	if sectionSeparator.MatchString(s) || sectionHeader.MatchString(s) {
+		return true
+	}
+	_, ok := allowed[s]
+	return ok
 }

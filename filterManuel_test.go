@@ -61,7 +61,10 @@ func TestShouldCopy(t *testing.T) {
 		{"Monst", false},
 
 	}
-	allowedMonsters := []string{"Monster", "Monster'1", "Monster 2", "Monster.37", "monster-dash", "comma, the monster"}
+	allowedMonsters := map[string]struct{}{
+		"Monster": {}, "Monster'1": {}, "Monster 2": {}, "Monster.37": {},
+		"monster-dash": {}, "comma, the monster": {},}
+
 	for _, c := range monsterCases {
 		got := ShouldCopy(c.in, allowedMonsters)
 		if got != c.want {
