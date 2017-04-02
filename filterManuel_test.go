@@ -37,7 +37,35 @@ func TestShouldCopy(t *testing.T) {
 	for _, c := range cases {
 		got := ShouldCopy(c.in, nil)
 		if got != c.want {
-			t.Error("ShouldCopy(%q) == %q, want %q", c.in, got, c.want)
+			t.Errorf("ShouldCopy(%v) == %v, want %v", c.in, got, c.want)
+		}
+	}
+	monsterCases := []struct {
+		in   string
+		want bool
+	}{
+		//exactly match monsters in list
+		{"Monster", true},
+		{"Monster 2", true},
+		{"Monster'1", true},
+		{"comma, the monster", true},
+		{"monster-dash", true},
+		{"Monster.37", true},
+
+		//simlarly named monsters not in list
+		{"monster", false},
+		{"yolo", false},
+		{"comma, ", false},
+		{"-dash", false},
+		{"37", false},
+		{"Monst", false},
+
+	}
+	allowedMonsters := []string{"Monster", "Monster'1", "Monster 2", "Monster.37", "monster-dash", "comma, the monster"}
+	for _, c := range monsterCases {
+		got := ShouldCopy(c.in, allowedMonsters)
+		if got != c.want {
+			t.Errorf("ShouldCopy(%v) == %v, want %v", c.in, got, c.want)
 		}
 	}
 }
