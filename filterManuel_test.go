@@ -60,6 +60,12 @@ func TestShouldCopy(t *testing.T) {
 		{"37", false},
 		{"Monst", false},
 
+		//ignore the braces after monster name that missingManuel adds
+		{"Monster {1}", true},
+		{"monster-dash {2}", true},
+		{"Monster.37 {3}", true},
+		{"Monst {3}", false},
+
 	}
 	allowedMonsters := map[string]struct{}{
 		"Monster": {}, "Monster'1": {}, "Monster 2": {}, "Monster.37": {},
