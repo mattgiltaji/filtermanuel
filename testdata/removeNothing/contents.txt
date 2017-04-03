@@ -1,0 +1,132 @@
+=================================
+[Crimbo Town Toy Factory (2009)]
+monkey wrenchin' elf {3}
+provocateur elf {2}
+bolt-cuttin' elf {3}
+propaganda-spewin' elf {3}
+=================================
+[The Don's Crimbo Compound]
+Mob Penguin Arsonist {1}
+Mesmerizing Penguin {3}
+Undercover Penguin {3}
+Black-and-White-Ops Penguin {3}
+Cement Cobbler Penguin {3}
+=================================
+[Old Crimbo Town Toy Factory]
+Mob Penguin hitpenguin {1}
+=================================
+[Sinister Dodecahedron]
+death ray in a pear tree {3}
+turtle mech {1}
+Swiss hen {3}
+killing bird {2}
+golden ring {1}
+goose a-laying {2}
+swarm a-swarming {3}
+blade a-spinning {1}
+laser lancing {2}
+borg a-beeping {2}
+strangler strangling {3}
+stomper stomping {2}
+=================================
+[Crimbo Town Toy Factory (2007)]
+Ribbon-Cutting Elfborg {2}
+Arc-Welding Elfborg {2}
+Weapons-Assembly Elfborg {3}
+Decal-Applying Elfborg {3}
+=================================
+[Simple Tool-Making Cave]
+flint-scraping cave elf {1}
+rock-banging cave elf {1}
+sinew-stretching cave elf {3}
+=================================
+[Spooky Fright Factory]
+skeletal reindeer {3}
+gift-wrapping vampire {3}
+stocking-stuffing zombie {2}
+bow-making mummy {1}
+toy-making creature from the Gray Lagoon {2}
+=================================
+[Crimborg Collective Factory]
+Rudolphus of Crimborg {3}
+=================================
+[Crimbo Town Toy Factory (2005)]
+Striking Factory-Worker Elf {1}
+Striking Middle-Management Elf {1}
+Striking Pencil-Pusher Elf {3}
+Striking Stocking-Stuffer Elf {1}
+Striking Gift-Wrapper Elf {1}
+Rudolph the Red {1}
+Dopey, the Reindeer {2}
+Sleepy, the Reindeer {1}
+Happy, the Reindeer {1}
+Bashful, the Reindeer {2}
+Grumpy, the Reindeer {2}
+Doc, the Reindeer {2}
+Sneezy, the Reindeer {3}
+Zeppo, the Reindeer {2}
+=================================
+[Market Square, 28 Days Later]
+drunken zombie half-orc hobo {1}
+fiendish zombie can of asparagus {2}
+Zombie Knob Goblin Assistant Chef {2}
+Knob Goblin Elite Zombie {1}
+zombie Gnollish crossdresser {1}
+zombie yeast beast {1}
+=================================
+[The Mall of Loathing, 28 Days Later]
+zombie apathetic lizardman {1}
+Zombie Clown {1}
+zombie zmobie {1}
+zombie frat boy {2}
+zombie hippy {2}
+white zombie {2}
+=================================
+[Wrong Side of the Tracks, 28 Days Later]
+Zombie N00b {3}
+Zombie eXtreme Snowboarding Orc {2}
+Zombie Quiet Healer {2}
+Zombie Goth Giant {1}
+=================================
+[Shivering Timbers]
+toilet-papered tree {2}
+fur tree {1}
+pumpkin tree {1}
+deadwood tree {2}
+=================================
+[A Skeleton Invasion!]
+skeleton invader {2}
+two skeleton invaders {1}
+three skeleton invaders {2}
+four skeleton invaders {2}
+five skeleton invaders {1}
+=================================
+[The Cannon Museum]
+ten skeletons {1}
+=================================
+[A Stinking Abyssal Portal]
+scout seal {3}
+=================================
+[A Freezing Abyssal Portal]
+bulwark bull seal {3}
+=================================
+[A Yawning Abyssal Portal]
+official seal {3}
+=================================
+[The Space Odyssey Discotheque]
+stiff disco dancer {1}
+awkward disco dancer {3}
+flexible disco dancer {3}
+=================================
+[The Spirit World]
+spirit bedbug {3}
+spirit pea {3}
+spirit faucet {3}
+=================================
+[Some Scattered Smoking Debris]
+perimeter defense sphere {3}
+illegal alien {2}
+=================================
+[A Crater Full of Space Beasts]
+space beast {3}
+=================================

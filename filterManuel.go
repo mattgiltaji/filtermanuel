@@ -111,3 +111,25 @@ func isInAllowedSet(s string, allowed map[string]struct{}) bool {
 	_, ok := allowed[stringWithBracketsRemoved]
 	return ok
 }
+
+func removeBlankAreas(contents *bufio.Scanner) (filtered []string) {
+	newLine := ""
+	for contents.Scan() {
+		line := contents.Text()
+		if isSectionHeader(line) {
+			contents.Scan()
+			nextLine := contents.Text()
+			if isSectionSeparator(nextLine) {
+				continue
+			} else {
+				filtered = append(filtered, newLine+line)
+				newLine = "\r\n"
+				filtered = append(filtered, newLine+nextLine)
+			}
+		} else {
+			filtered = append(filtered, newLine+line)
+			newLine = "\r\n"
+		}
+	}
+	return
+}

@@ -1,0 +1,35 @@
+=================================
+[Engineering]
+=================================
+[Navigation]
+ancient unspeakable bugbear {3}
+=================================
+[Galley]
+trendy bugbear chef {1}
+=================================
+[The Hallowed Halls]
+=================================
+[Shop Class]
+X-fingered Shop Teacher {2}
+=================================
+[Chemistry Class]
+Mrs. K, the Chemistry Teacher {3}
+=================================
+[Art Class]
+=================================
+[The VERY Unquiet Garves]
+=================================
+[Cobb's Knob Laboratory]
+=================================
+[Frat House]
+=================================
+[The Battlefield (Frat Uniform)]
+=================================
+[The Battlefield (Hippy Uniform)]
+=================================
+[Wartime Hippy Camp]
+Orcish Frat Boy Spy {1}
+=================================
+[The Valley of Rof L'm Fao]
+Bad ASCII Art {1}
+=================================

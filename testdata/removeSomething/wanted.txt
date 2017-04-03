@@ -1,0 +1,19 @@
+=================================
+[Navigation]
+ancient unspeakable bugbear {3}
+=================================
+[Galley]
+trendy bugbear chef {1}
+=================================
+[Shop Class]
+X-fingered Shop Teacher {2}
+=================================
+[Chemistry Class]
+Mrs. K, the Chemistry Teacher {3}
+=================================
+[Wartime Hippy Camp]
+Orcish Frat Boy Spy {1}
+=================================
+[The Valley of Rof L'm Fao]
+Bad ASCII Art {1}
+=================================

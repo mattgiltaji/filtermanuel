@@ -1,10 +1,13 @@
 package main
 
 import (
+	"bufio"
+	"bytes"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"runtime"
+	"strings"
 	"testing"
 )
 
@@ -106,6 +109,44 @@ func TestShouldCopy(t *testing.T) {
 		if got != c.want {
 			t.Errorf("shouldCopy(%v, %v) == %v, want %v", c.in, c.allowed, got, c.want)
 		}
+	}
+}
+
+func TestRemoveBlankAreas(t *testing.T) {
+	testDataDir := getTestDataDir(t)
+	cases := []string{
+		filepath.Join(testDataDir, "removeEverything"),
+		filepath.Join(testDataDir, "removeNothing"),
+		filepath.Join(testDataDir, "removeSomething"),
+	}
+	for _, c := range cases {
+		toFilterFile := filepath.Join(c, "contents.txt")
+		wantFile := filepath.Join(c, "wanted.txt")
+
+		toFilterContents, err := ioutil.ReadFile(toFilterFile)
+		if err != nil {
+			t.Fatalf("Could not read %v. Error: %v", toFilterFile, err)
+		}
+		wantContents, err := ioutil.ReadFile(wantFile)
+		if err != nil {
+			t.Fatalf("Could not read %v. Error: %v", wantFile, err)
+		}
+		toFilter := bufio.NewScanner(bytes.NewReader(toFilterContents))
+		want := bufio.NewScanner(bytes.NewReader(wantContents))
+
+		gotRaw := removeBlankAreas(toFilter)
+		got := bufio.NewScanner(strings.NewReader(strings.Join(gotRaw, "")))
+		i := 1
+		for want.Scan() && got.Scan() {
+			wantLine := want.Text()
+			gotLine := got.Text()
+			if wantLine != gotLine {
+				t.Errorf("line %v of removeBlankAreas(%v) == '%v', want '%v'", i, toFilterFile, gotLine, wantLine)
+				break
+			}
+			i++
+		}
+
 	}
 }
 
