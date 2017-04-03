@@ -2,8 +2,10 @@ package main
 
 import (
 	"bufio"
+	"flag"
 	"log"
 	"os"
+	"path/filepath"
 	"regexp"
 )
 
@@ -11,7 +13,36 @@ var (
 	sectionSeparator = regexp.MustCompile(`^=====*$`)
 	sectionHeader    = regexp.MustCompile(`^\[[A-Z]+.*\]$`)
 	bracketsToIgnore = regexp.MustCompile(` \{[0-3]\}$`)
+	manuelFilePath   string
+	faxbotFilePath   string
+	outputFilePath   string
 )
+
+func init() {
+	const (
+		manuelUsage = "path to the file of output from missingManuel.ash"
+		faxbotUsage = "path to the file of monsters available in the faxbot"
+		outputUsage = "path to the missing manuel output file"
+	)
+	var (
+		defaultDir    = filepath.Clean(`C:\Users\admin\Desktop\kolmafia\samples`)
+		manuelDefault = filepath.Join(defaultDir, "monster manuel.txt")
+		faxbotDefault = filepath.Join(defaultDir, "faxbot.txt")
+		outputDefault = filepath.Join(defaultDir, "filtered_faxbot.txt")
+	)
+
+	flag.StringVar(&manuelFilePath, "manuel", manuelDefault, manuelUsage)
+	flag.StringVar(&manuelFilePath, "m", manuelDefault, manuelUsage+" (shorthand)")
+	flag.StringVar(&faxbotFilePath, "faxbot", faxbotDefault, faxbotUsage)
+	flag.StringVar(&faxbotFilePath, "f", faxbotDefault, faxbotUsage+" (shorthand)")
+	flag.StringVar(&outputFilePath, "output", outputDefault, outputUsage)
+	flag.StringVar(&outputFilePath, "o", outputDefault, outputUsage+" (shorthand)")
+}
+
+func main() {
+	flag.Parse()
+	filterManuel(manuelFilePath, faxbotFilePath, outputFilePath)
+}
 
 func filterManuel(manuelPath, faxbotPath, outputPath string) {
 	//todo: read and prep manuel and faxbox in parallel
