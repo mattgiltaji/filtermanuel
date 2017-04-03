@@ -55,17 +55,28 @@ func filterManuel(manuelPath, faxbotPath, outputPath string) {
 }
 
 func shouldCopy(s string, allowed map[string]struct{}) bool {
-	/*Returns true if string should be copied to output file
-
-	3 types of lines should return true:
-		A) a monster that matches a line in allowed (ignoring special brackets)
-		B) a section header - [foo bar]
-		C) a section divider - =====...===
-	We don't necessarily evaluate these in order, we try the easy ones first
-	*/
-	if sectionSeparator.MatchString(s) || sectionHeader.MatchString(s) {
+	if isSectionSeparator(s) {
 		return true
 	}
-	_, ok := allowed[bracketsToIgnore.ReplaceAllString(s, "")]
+	if isSectionHeader(s) {
+		return true
+	}
+	if isInAllowedSet(s, allowed) {
+		return true
+	}
+	return false
+}
+
+func isSectionSeparator(s string) bool {
+	return sectionSeparator.MatchString(s)
+}
+
+func isSectionHeader(s string) bool {
+	return sectionHeader.MatchString(s)
+}
+
+func isInAllowedSet(s string, allowed map[string]struct{}) bool {
+	stringWithBracketsRemoved := bracketsToIgnore.ReplaceAllString(s, "")
+	_, ok := allowed[stringWithBracketsRemoved]
 	return ok
 }
