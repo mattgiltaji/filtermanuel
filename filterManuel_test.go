@@ -14,6 +14,7 @@ func TestFilterManuel(t *testing.T) {
 		filepath.Join(testDataDir, "copyEverything"),
 		filepath.Join(testDataDir, "copyNothing"),
 		filepath.Join(testDataDir, "copySomething"),
+		filepath.Join(testDataDir, "fullTest"),
 	}
 	for _, c := range cases {
 		gotFile, err := ioutil.TempFile("", "filtered_manuel")

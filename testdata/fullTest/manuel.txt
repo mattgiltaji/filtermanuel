@@ -1,0 +1,878 @@
+=================================
+[The Upper Chamber]
+tomb rat king {1}
+=================================
+[Hobopolis Town Square]
+Hodgman, The Hoboverlord {2}
+=================================
+[Burnbarrel Blvd.]
+Ol' Scratch {2}
+=================================
+[Exposure Esplanade]
+Frosty {2}
+=================================
+[The Heap]
+Oscus {2}
+=================================
+[The Ancient Hobo Burial Ground]
+Zombo {2}
+=================================
+[The Purple Light District]
+Chester {2}
+=================================
+[The Slime Tube]
+Mother Slime {3}
+=================================
+[Dreadsylvanian Woods]
+Falls-From-Sky {3}
+Great Wolf of the Air {2}
+=================================
+[Dreadsylvanian Village]
+Zombie Homeowners' Association {2}
+Mayor Ghost {3}
+=================================
+[Dreadsylvanian Castle]
+Count Drunkula {2}
+The Unkillable Skeleton {3}
+=================================
+[The Brinier Deepers]
+trophyfish {3}
+=================================
+[An Octopus's Garden]
+moister oyster {1}
+=================================
+[The Dive Bar]
+Mer-kin tippler {1}
+=================================
+[Mer-kin Elementary School]
+Mer-kin specter {1}
+=================================
+[Investigating a Plaintive Telegram]
+Jeff the Fancy Skeleton {2}
+Pecos Dave {1}
+Pharaoh Amoon-Ra Cowtep {2}
+Snake-Eyes Glenn {2}
+Former Sheriff Dan Driscoll {2}
+unusual construct {2}
+Clara {1}
+Granny Hackleton {1}
+=================================
+[The Haunted Gallery]
+ghost of Elizabeth Spookyraven {1}
+=================================
+[The Haunted Bathroom]
+Guy Made Of Bees {2}
+=================================
+[The Haunted Bedroom]
+animated nightstand (mahogany combat) {3}
+animated nightstand (mahogany noncombat) {3}
+animated nightstand (white combat) {3}
+animated nightstand (white noncombat) {3}
+=================================
+[The Haunted Laboratory]
+Stephen Spookyraven {2}
+=================================
+[The Hidden Temple]
+clan of cave bars {1}
+=================================
+[Battlefield (Cloaca Uniform)]
+Dyspepsi-Cola General {1}
+=================================
+[The Maelstrom of Lovers]
+Thug 1 and Thug 2 {1}
+=================================
+[The Glacier of Jerks]
+The Large-Bellied Snitch {1}
+=================================
+[Medbay]
+hypodermic bugbear {3}
+anesthesiologist bugbear {3}
+bugbear robo-surgeon {3}
+=================================
+[Waste Processing]
+scavenger bugbear {2}
+creepy eye-stalk tentacle monster {3}
+grouchy furry monster {3}
+=================================
+[Sonar]
+batbugbear {1}
+=================================
+[Science Lab]
+bugbear scientist {2}
+spiderbugbear {2}
+=================================
+[Morgue]
+bugaboo {2}
+bugbear mortician {3}
+=================================
+[Special Ops]
+Black Ops Bugbear {2}
+=================================
+[Engineering]
+Battlesuit Bugbear Type {3}
+bugbear drone {2}
+liquid metal bugbear {3}
+=================================
+[Navigation]
+ancient unspeakable bugbear {3}
+N-space Virtual Assistant {3}
+=================================
+[Galley]
+trendy bugbear chef {1}
+angry cavebugbear {3}
+=================================
+[The Hallowed Halls]
+wastoid {3}
+dweebie {1}
+sporto {1}
+motorhead {2}
+=================================
+[Shop Class]
+out-of-control bandsaw {2}
+deadly vise {2}
+X-fingered Shop Teacher {2}
+screw golem {3}
+demonic jigsaw {2}
+=================================
+[Chemistry Class]
+Bunsen burner and beaker {3}
+dropped base {1}
+sodium golem {2}
+Mrs. K, the Chemistry Teacher {3}
+=================================
+[Art Class]
+rulergheist {2}
+clay golem {3}
+misproportioned portrait {2}
+wire sculpture {3}
+François Verte, Art Teacher {1}
+=================================
+[The VERY Unquiet Garves]
+Skelter Butleton, the Butler Skeleton {1}
+=================================
+[Cobb's Knob Laboratory]
+Knob Goblin Very Mad Scientist {1}
+=================================
+[Frat House]
+The Frattlesnake {3}
+=================================
+[The Battlefield (Frat Uniform)]
+Slow Talkin' Elliot {1}
+Neil {2}
+Zim Merman {1}
+C.A.R.N.I.V.O.R.E. Operative {1}
+Glass of Orange Juice {1}
+=================================
+[The Battlefield (Hippy Uniform)]
+Monty Basingstoke-Pratt, IV {1}
+Brutus, the toga-clad lout {2}
+Danglin' Chad {2}
+War Frat Streaker {2}
+=================================
+[Wartime Hippy Camp]
+Orcish Frat Boy Spy {1}
+=================================
+[The Valley of Rof L'm Fao]
+Bad ASCII Art {1}
+=================================
+[The Barrel Full of Barrels]
+small barrel mimic {1}
+medium-sized barrel mimic {1}
+huge barrel mimic {1}
+=================================
+[The Fungal Nethers]
+armored mushroom guy {1}
+dancing mushroom guy {3}
+=================================
+[The Red Zeppelin]
+Red Fox {1}
+=================================
+[Smartest Adventurer Contest]
+Metaphysical Gastronomist {3}
+The Mastermind {2}
+=================================
+[Hottest Adventurer Contest]
+Burnglar {1}
+The Lavalier {1}
+=================================
+[Spookiest Adventurer Contest]
+Arthur Frankenstein {1}
+=================================
+[Stinkiest Adventurer Contest]
+Granola Barbarian {1}
+Assassin {2}
+Odorous Humongous {1}
+=================================
+[Sleaziest Adventurer Contest]
+Porkpocket {2}
+Leonard {2}
+=================================
+[The Nemesis' Lair]
+Gorgolok, the Infernal Seal (Inner Sanctum) {1}
+Stella, the Turtle Poacher (Inner Sanctum) {2}
+Spirit of New Wave (Inner Sanctum) {2}
+Somerset Lopez, Dread Mariachi (Inner Sanctum) {2}
+warehouse worker {1}
+mariachi bruiser {1}
+=================================
+[The Spooky Gravy Burrow]
+Felonia, Queen of the Spooky Gravy Fairies {1}
+=================================
+[The Corpse Bog]
+the ghost of Phil Bunion {2}
+=================================
+[Swamp Beaver Territory]
+conservationist hippy {2}
+=================================
+[The Weird Swamp Village]
+swamp skunk {2}
+=================================
+[El Vibrato Island]
+industrious construct {1}
+hulking construct {1}
+=================================
+[El Vibrato Island]
+bizarre construct (translated) {2}
+hulking construct (translated) {2}
+industrious construct (translated) {2}
+lonely construct (translated) {3}
+menacing construct (translated) {3}
+towering construct (translated) {3}
+=================================
+[The Primordial Soup]
+Cyrus the Virus {3}
+=================================
+[The Jungles of Ancient Loathing]
+group of cultists {3}
+ancient temple guardian {3}
+=================================
+[Domed City of Ronaldus]
+dogcat {1}
+hamsterpus {1}
+=================================
+[Domed City of Grimacia]
+cat-alien {1}
+=================================
+[The Landscaper's Lair]
+menacing lawn gnome {2}
+mowing lawn gnome {2}
+mounted lawn gnome {2}
+=================================
+[The Landscaper's Lair]
+The Landscaper {3}
+=================================
+[Professor Jacking's Small-O-Fier]
+cruel dust mote {2}
+malevolent magnetic field {1}
+funk particle {1}
+jungle scabie {1}
+=================================
+[Professor Jacking's Huge-A-Ma-tron]
+Castle in the Clouds in the Sky {1}
+Spookyraven Manor {2}
+loose coalition of yetis, snowmen, and goats {3}
+Fearsome Wacken {3}
+=================================
+[Vanya's Castle Foyer]
+ghost {3}
+fleaman {1}
+medusa {1}
+=================================
+[Vanya's Castle Foyer]
+Vanya's Creature {3}
+=================================
+[Kegger in the Woods]
+orcish juvenile delinquent {1}
+orcish frat wannaboy {1}
+actual orcish frat boy {2}
+jailbait orquette {3}
+juvenile delinquent orquette {2}
+totally trashed orquette {2}
+=================================
+[The Electric Lemonade Acid Parade]
+Timmy Tofurkey cast member {3}
+Susie Soyburger cast member {2}
+Neptune, the Dog that Is a Respected Equal and Not a Pet cast member {2}
+Timmy Tofurkey {3}
+Susie Soyburger {1}
+Neptune, the Dog that Is a Respected Equal and Not a Pet {3}
+Essence of Tofu {3}
+Essence of Soy {3}
+Essence of Interspecies Respect {3}
+=================================
+[Neckback Crick]
+unearthed monstrosity {3}
+=================================
+[Lollipop Forest]
+lollicat {1}
+lolligator {1}
+lolliphaunt {2}
+lolrus {2}
+=================================
+[Fudge Mountain]
+fudge weasel {1}
+=================================
+[Fudge Mountain]
+swarm of fudgewasps {1}
+=================================
+[Crimbo Town Toy Factory (2012)]
+plastic-extruding animelf {1}
+tiny-screwing animelf {1}
+quality control animelf {1}
+=================================
+[CRIMBCO WC]
+Elf Hobo {3}
+=================================
+[Crimbo Town Toy Factory (2009)]
+monkey wrenchin' elf {3}
+provocateur elf {2}
+bolt-cuttin' elf {3}
+propaganda-spewin' elf {3}
+=================================
+[The Don's Crimbo Compound]
+Mob Penguin Arsonist {1}
+Mesmerizing Penguin {3}
+Undercover Penguin {3}
+Black-and-White-Ops Penguin {3}
+Cement Cobbler Penguin {3}
+=================================
+[Old Crimbo Town Toy Factory]
+Mob Penguin hitpenguin {1}
+=================================
+[Sinister Dodecahedron]
+death ray in a pear tree {3}
+turtle mech {1}
+Swiss hen {3}
+killing bird {2}
+golden ring {1}
+goose a-laying {2}
+swarm a-swarming {3}
+blade a-spinning {1}
+laser lancing {2}
+borg a-beeping {2}
+strangler strangling {3}
+stomper stomping {2}
+=================================
+[Crimbo Town Toy Factory (2007)]
+Ribbon-Cutting Elfborg {2}
+Arc-Welding Elfborg {2}
+Weapons-Assembly Elfborg {3}
+Decal-Applying Elfborg {3}
+=================================
+[Simple Tool-Making Cave]
+flint-scraping cave elf {1}
+rock-banging cave elf {1}
+sinew-stretching cave elf {3}
+=================================
+[Spooky Fright Factory]
+skeletal reindeer {3}
+gift-wrapping vampire {3}
+stocking-stuffing zombie {2}
+bow-making mummy {1}
+toy-making creature from the Gray Lagoon {2}
+=================================
+[Crimborg Collective Factory]
+Rudolphus of Crimborg {3}
+=================================
+[Crimbo Town Toy Factory (2005)]
+Striking Factory-Worker Elf {1}
+Striking Middle-Management Elf {1}
+Striking Pencil-Pusher Elf {3}
+Striking Stocking-Stuffer Elf {1}
+Striking Gift-Wrapper Elf {1}
+Rudolph the Red {1}
+Dopey, the Reindeer {2}
+Sleepy, the Reindeer {1}
+Happy, the Reindeer {1}
+Bashful, the Reindeer {2}
+Grumpy, the Reindeer {2}
+Doc, the Reindeer {2}
+Sneezy, the Reindeer {3}
+Zeppo, the Reindeer {2}
+=================================
+[Market Square, 28 Days Later]
+drunken zombie half-orc hobo {1}
+fiendish zombie can of asparagus {2}
+Zombie Knob Goblin Assistant Chef {2}
+Knob Goblin Elite Zombie {1}
+zombie Gnollish crossdresser {1}
+zombie yeast beast {1}
+=================================
+[The Mall of Loathing, 28 Days Later]
+zombie apathetic lizardman {1}
+Zombie Clown {1}
+zombie zmobie {1}
+zombie frat boy {2}
+zombie hippy {2}
+white zombie {2}
+=================================
+[Wrong Side of the Tracks, 28 Days Later]
+Zombie N00b {3}
+Zombie eXtreme Snowboarding Orc {2}
+Zombie Quiet Healer {2}
+Zombie Goth Giant {1}
+=================================
+[Shivering Timbers]
+toilet-papered tree {2}
+fur tree {1}
+pumpkin tree {1}
+deadwood tree {2}
+=================================
+[A Skeleton Invasion!]
+skeleton invader {2}
+two skeleton invaders {1}
+three skeleton invaders {2}
+four skeleton invaders {2}
+five skeleton invaders {1}
+=================================
+[The Cannon Museum]
+ten skeletons {1}
+=================================
+[A Stinking Abyssal Portal]
+scout seal {3}
+=================================
+[A Freezing Abyssal Portal]
+bulwark bull seal {3}
+=================================
+[A Yawning Abyssal Portal]
+official seal {3}
+=================================
+[The Space Odyssey Discotheque]
+stiff disco dancer {1}
+awkward disco dancer {3}
+flexible disco dancer {3}
+=================================
+[The Spirit World]
+spirit bedbug {3}
+spirit pea {3}
+spirit faucet {3}
+=================================
+[Some Scattered Smoking Debris]
+perimeter defense sphere {3}
+illegal alien {2}
+=================================
+[A Crater Full of Space Beasts]
+space beast {3}
+=================================
+[Anger Man's Level]
+Anger Man {1}
+=================================
+[Fear Man's Level]
+Fear Man {1}
+=================================
+[Doubt Man's Level]
+Doubt Man {1}
+=================================
+[Regret Man's Level]
+Regret Man {1}
+=================================
+[Chinatown Shops]
+yakuza courier {1}
+=================================
+[Triad Factory]
+The Sierpinski brothers {1}
+=================================
+[Shiawase-Mitsuhama Building]
+Chief Electronic Overseer {1}
+=================================
+[Chinatown Tenement]
+The Server {1}
+White Bone Demon {1}
+=================================
+[The Gourd!]
+spider conspirator {1}
+=================================
+[The Old Man's Bathtime Adventures]
+giant man-eating shark {1}
+Deadly Hydra {1}
+=================================
+[Unleash Your Inner Wolf]
+Dutch Angle straw house {1}
+oily straw house {1}
+glowing ash house {1}
+pitch pine house {1}
+slippery elm house {1}
+brick icehouse {1}
+brick outhouse {1}
+brick (suggestive pause) house {1}
+=================================
+[Sweet-Ade Lake]
+school of gummi piranhas {1}
+=================================
+[Eager Rice Burrows]
+chocolate hare {1}
+chocolate-cherry prairie dog {1}
+=================================
+[A Deserted Stretch of I-911]
+sewer tanker {1}
+=================================
+[Ye Olde Medievale Villagee]
+Medieval mug apprentice {1}
+=================================
+[The Sunken Party Yacht]
+taco fish {1}
+=================================
+[The Mansion of Dr. Weirdeaux]
+one of Doctor Weirdeaux's creations {3}
+=================================
+[The Secret Government Laboratory]
+government scientist {3}
+lab monkey {3}
+creepy little girl {2}
+super-sized Cola Wars soldier {2}
+E.V.E., the robot zombie {3}
+=================================
+[The Deep Dark Jungle]
+bigface {3}
+smoke monster {1}
+Mercenary of Fortune {2}
+=================================
+[The Jungle]
+skeleton {1}
+=================================
+[The Ice Caves]
+yeti {1}
+alien {1}
+=================================
+[The Temple Ruins]
+magma man {1}
+mummy {2}
+crocodile man {3}
+cultist {3}
+=================================
+[Hell]
+vampire {3}
+devil {3}
+=================================
+[The Spider Hole]
+spider queen {3}
+=================================
+[The Beehive]
+queen bee (spelunky) {3}
+=================================
+[The Crashed U. F. O.]
+alien queen {3}
+=================================
+[The City of Goooold]
+Bananubis {3}
+=================================
+[LOLmec's Lair]
+LOLmec {3}
+=================================
+[Yomama's Throne]
+Yomama {3}
+=================================
+[The Mean Streets]
+uncommon criminal {2}
+=================================
+[Warehouse Row]
+rare criminal {3}
+=================================
+[Gotpork Gardens Cemetery]
+Miss Graves {1}
+=================================
+[Gotpork City Sewers]
+The Plumber {3}
+plumber's helper {1}
+=================================
+[Porkham Asylum]
+The Author {2}
+=================================
+[The Old Gotpork Library]
+The Mad Libber {2}
+=================================
+[Gotpork Clock, Inc.]
+high-level mook {3}
+Doc Clock {3}
+time bandit {3}
+clockwork man {3}
+=================================
+[Gotpork Foundry]
+Mr. Burns {3}
+serial arsonist {3}
+burner {3}
+=================================
+[Trivial Pursuits, LLC]
+The Inquisitor {3}
+inquisitee {3}
+trivia researcher {3}
+=================================
+[JokesterCo]
+The Jokester {3}
+=================================
+[Altar]
+The Thing with No Name {2}
+=================================
+[Avatar of Boris]
+The Avatar of Sneaky Pete {3}
+The Luter {3}
+=================================
+[Avatar of Jarlsberg]
+Clancy {3}
+The Avatar of Boris {3}
+=================================
+[Avatar of Sneaky Pete]
+The Avatar of Jarlsberg {3}
+=================================
+[BRICKO]
+BRICKO airship {3}
+BRICKO bat {1}
+BRICKO cathedral {3}
+BRICKO elephant {3}
+BRICKO gargantuchicken {3}
+BRICKO octopus {3}
+BRICKO ooze {3}
+BRICKO oyster {3}
+BRICKO python {3}
+BRICKO turtle {3}
+BRICKO vacuum cleaner {3}
+=================================
+[Bees Hate You]
+bee swarm {3}
+bee thoven {3}
+beebee gunners {3}
+Beebee King {3}
+beebee queue {3}
+buzzerker {3}
+moneybee {3}
+mumblebee {3}
+Queen Bee {3}
+=================================
+[Black Crayon]
+Black Crayon Beast {3}
+Black Crayon Constellation {1}
+Black Crayon Crimbo Elf {1}
+Black Crayon Demon {1}
+Black Crayon Elemental {2}
+Black Crayon Fish {1}
+Black Crayon Flower {1}
+Black Crayon Frat Orc {1}
+Black Crayon Goblin {1}
+Black Crayon Golem {1}
+Black Crayon Hippy {1}
+Black Crayon Man {2}
+Black Crayon Mer-kin {1}
+Black Crayon Pirate {1}
+Black Crayon Shambling Monstrosity {1}
+Black Crayon Spiraling Shape {1}
+Black Crayon Undead Thing {3}
+=================================
+[Bugbear Invasion]
+Bugbear Captain {3}
+=================================
+[CLEESH]
+frog {3}
+newt {3}
+salamander {3}
+=================================
+[Food Monstrosities]
+Box of Crafty Dinner {3}
+Frozen Bag of Tortellini {3}
+Possessed Can of Creepy Pasta {3}
+Possessed Can of Linguine-Os {3}
+Possessed Jar of Alphredo™ {3}
+=================================
+[Grey Goo]
+enormous blob of gray goo {3}
+largish blob of gray goo {3}
+little blob of gray goo {3}
+=================================
+[Halloween XX]
+swarm of mutant fire ants {1}
+=================================
+[Heavy Rains]
+alley catfish {1}
+Aquabat {3}
+aquaconda {3}
+Aquagoblin {3}
+Auqadargon {3}
+Big Wisnaqua {3}
+Dr. Aquard {3}
+freshwater bonefish {1}
+giant tardigrade {3}
+gourmet gourami {1}
+Gurgle {3}
+Lord Soggyraven {3}
+piranhadon {2}
+Protector Spurt {3}
+storm cow {3}
+The Aquaman {3}
+The Rain King {3}
+=================================
+[Infernal Seals]
+broodling seal {2}
+Centurion of Sparky {1}
+heat seal {2}
+navy seal {1}
+Servant of Grodstank {2}
+shadow of Black Bubbles {3}
+Spawn of Wally {1}
+watertight seal {2}
+wet seal {3}
+=================================
+[Jacking's Lab]
+Professor Jacking {3}
+=================================
+[KOLHS]
+Principal Mooney {3}
+=================================
+[Mer-kin Temple]
+Dad Sea Monkee {3}
+=================================
+[Mini-Hipster]
+angry bassist {3}
+blue-haired girl {3}
+evil ex-girlfriend {3}
+peeved roommate {3}
+random scenester {3}
+=================================
+[Misc. Spelunking]
+shopkeeper {3}
+=================================
+[Naughty Sorceress' Tower]
+Beer Batter {3}
+best-selling novelist {3}
+Big Meat Golem {3}
+Bowling Cricket {3}
+Bronze Chef {3}
+collapsed mineshaft golem {3}
+concert pianist {3}
+El Diablo {3}
+Electron Submarine {3}
+endangered inflatable white tiger {3}
+Enraged Cow {3}
+fancy bath slug {3}
+Flaming Samurai {3}
+giant bee {3}
+Giant Desktop Globe {3}
+giant fried egg {3}
+Ice Cube {3}
+malevolent crop circle {3}
+possessed pipe-organ {3}
+Pretty Fly {3}
+darkness {3}
+Fickle Finger of F8 {3}
+Tyrannosaurus Tex {3}
+Vicious Easel {3}
+=================================
+[Nemeses]
+Gorgolok, the Demonic Hellseal {1}
+Gorgolok, the Infernal Seal (The Nemesis' Lair) {1}
+Gorgolok, the Infernal Seal (Volcanic Cave) {1}
+Somerset Lopez, Demon Mariachi {2}
+Somerset Lopez, Dread Mariachi (The Nemesis' Lair) {2}
+Somerset Lopez, Dread Mariachi (Volcanic Cave) {2}
+Stella, the Demonic Turtle Poacher {2}
+Stella, the Turtle Poacher (The Nemesis' Lair) {2}
+Stella, the Turtle Poacher (Volcanic Cave) {2}
+Demon of New Wave {2}
+Spirit of New Wave (The Nemesis' Lair) {2}
+Spirit of New Wave (Volcanic Cave) {2}
+=================================
+[Nemesis Assassins]
+Argarggagarg the Dire Hellseal {1}
+flock of seagulls {2}
+hunting seal {1}
+Jocko Homo {2}
+mariachi bandolero {2}
+Safari Jack, Small-Game Hunter {2}
+The Mariachi With No Name {2}
+turtle trapper {2}
+=================================
+[Obsolete Monsters]
+topiary golem {3}
+Astronomer (obsolete) {1}
+ancient protector spirit (obsolete) {3}
+possessed wine rack (obsolete) {1}
+skeletal sommelier (obsolete) {3}
+=================================
+[Surprising Fist]
+Wu Tang the Betrayer {3}
+=================================
+[Taco Elves]
+tacobuilding elf {1}
+=================================
+[The Unknown Tomb]
+The Unknown Accordion Thief {2}
+The Unknown Disco Bandit {2}
+The Unknown Seal Clubber {1}
+The Unknown Turtle Tamer {2}
+=================================
+[Transmissions from Planet Xi]
+holographic army {3}
+They {2}
+Xiblaxian political prisoner {3}
+=================================
+[Wandering Accordionists]
+depressing French accordionist {2}
+lively Cajun accordionist {3}
+quirky indie-rock accordionist {2}
+=================================
+[Zombie Slayer]
+Angry Space Marine {3}
+Charity the Zombie Hunter {3}
+Deputy Nick Soames & Earl {3}
+Father McGruber {3}
+Father Nikolai Ravonovich {3}
+Hank North, Photojournalist {3}
+Herman East, Relivinator {3}
+Norville Rogers {3}
+Peacannon {3}
+rag-tag band of survivors {3}
+Scott the Miner {3}
+Special Agent Wallace Burke Corrigan {3}
+The Free Man {3}
+Wesley J. "Wes" Campbell {3}
+zombie-huntin' feller {3}
+Rene C. Corman {3}
+=================================
+[Unsorted]
+giant sandworm {3}
+black pudding {3}
+infernal seal larva {3}
+infernal seal spawn {3}
+vengeful turtle spectre {3}
+haunted soup tureen {3}
+evil spaghetti cult priest {1}
+slithering hollandaise glob {3}
+pernicious puddle of pesto {3}
+talking head {3}
+psychedelic fur {3}
+evil vihuela-playing mariachi {3}
+evil trumpet-playing mariachi {3}
+your butt {3}
+somebody else's butt {3}
+family of kobolds {3}
+tumbleweed {3}
+four-shadowed mime {1}
+skulldozer {3}
+pig {2}
+giant rubber spider {3}
+ghost (spelunky) {3}
+furious cow {3}
+emaciated rodeo clown {3}
+aggressive grass snake {3}
+furious giant cow {3}
+menacing rodeo clown {3}
+prince snake {3}
+ungulith {3}
+grizzled rodeo clown {3}
+king snake {3}
+Witchess Ox {2}
+Witchess Rook {1}
+Witchess Queen {3}
+Witchess King {2}
+Witchess Witch {3}
+Witchess Bishop {1}
+One Thousand Source Agents {3}
+Source Agent {3}
+Krakrox the Barbarian {3}
+time-spinner prank {2}
+=================================
+
+You have casually researched 127 creatures.
+You have thoroughly researched 158 creatures.
+You have exhaustively researched 1251 creatures.
+You have not researched 249 creatures.
+Total creatures: 1785.
+Done.
