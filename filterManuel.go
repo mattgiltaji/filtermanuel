@@ -53,17 +53,7 @@ func filterManuel(manuelPath, faxbotPath, outputPath string) {
 	defer manuelFile.Close()
 	manuel := bufio.NewScanner(manuelFile)
 
-	faxbotFile, err := os.Open(faxbotPath)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer faxbotFile.Close()
-	faxbot := bufio.NewScanner(faxbotFile)
-	faxbotMonsters := make(map[string]struct{})
-
-	for faxbot.Scan() {
-		faxbotMonsters[faxbot.Text()] = struct{}{}
-	}
+	faxbotMonsters := getFaxbotData(faxbotPath)
 
 	outputFile, err := os.Create(outputPath)
 	if err != nil {
@@ -83,6 +73,22 @@ func filterManuel(manuelPath, faxbotPath, outputPath string) {
 			newLine = "\r\n"
 		}
 	}
+	//read from output, filter through removeBlankAreas() and write it out again
+}
+
+func getFaxbotData(faxbotPath string) (faxbotData map[string]struct{}) {
+	faxbotFile, err := os.Open(faxbotPath)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer faxbotFile.Close()
+	faxbot := bufio.NewScanner(faxbotFile)
+	faxbotData = make(map[string]struct{})
+
+	for faxbot.Scan() {
+		faxbotData[faxbot.Text()] = struct{}{}
+	}
+	return
 }
 
 func shouldCopy(s string, allowed map[string]struct{}) bool {
