@@ -1,6 +1,47 @@
 package main
 
-import "testing"
+import (
+	"io/ioutil"
+	"os"
+	"path/filepath"
+	"runtime"
+	"testing"
+)
+
+func TestFilterManuel(t *testing.T) {
+	testDataDir := getTestDataDir(t)
+	cases := []string{
+		filepath.Join(testDataDir, "copyEverything"),
+		filepath.Join(testDataDir, "copyNothing"),
+		filepath.Join(testDataDir, "copySomething"),
+	}
+	for _, c := range cases {
+		gotFile, err := ioutil.TempFile("", "filtered_manuel")
+		if err != nil {
+			t.Fatalf("Could not create temp output file. Error: %v", err)
+		}
+		defer os.Remove(gotFile.Name())
+		manuelFile := filepath.Join(c, "manuel.txt")
+		faxbotFile := filepath.Join(c, "faxbot.txt")
+		expectedFile := filepath.Join(c, "expected.txt")
+
+		filterManuel(manuelFile, faxbotFile, gotFile.Name())
+
+		expectedContents, err := ioutil.ReadFile(expectedFile)
+		if err != nil {
+			t.Fatalf("Could not read %v. Error: %v", expectedFile, err)
+		}
+		gotContents, err := ioutil.ReadFile(gotFile.Name())
+		if err != nil {
+			t.Fatalf("Could not read %v. Error: %v", gotFile.Name(), err)
+		}
+		if string(expectedContents) != string(gotContents) {
+			t.Errorf("filterManuel(%v, %v, %v) == '%v', want '%v'", manuelFile, faxbotFile,
+				gotFile.Name(), string(gotContents), string(expectedContents))
+		}
+
+	}
+}
 
 func TestShouldCopy(t *testing.T) {
 	allowedMonsters := map[string]struct{}{
@@ -62,7 +103,20 @@ func TestShouldCopy(t *testing.T) {
 	for _, c := range cases {
 		got := shouldCopy(c.in, c.allowed)
 		if got != c.want {
-			t.Errorf("ShouldCopy(%v, %v) == %v, want %v", c.in, c.allowed, got, c.want)
+			t.Errorf("shouldCopy(%v, %v) == %v, want %v", c.in, c.allowed, got, c.want)
 		}
 	}
+}
+
+func getTestDataDir(t *testing.T) (testDataDir string) {
+	_, thisFile, _, ok := runtime.Caller(0)
+	if !ok {
+		t.Fatalf("Unable to determine runtime file location.")
+	}
+	thisDir := filepath.Dir(thisFile)
+	testDataDir, err := filepath.Abs(filepath.Join(thisDir, "testdata"))
+	if err != nil {
+		t.Fatalf("Unable to find testdata directory. Err: %v", err)
+	}
+	return
 }

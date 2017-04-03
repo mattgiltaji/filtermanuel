@@ -1,0 +1,20 @@
+=================================
+[Black Crayon]
+Black Crayon Beast {3}
+Black Crayon Constellation {1}
+Black Crayon Crimbo Elf {1}
+Black Crayon Demon {1}
+Black Crayon Elemental {2}
+Black Crayon Fish {1}
+Black Crayon Flower {1}
+Black Crayon Frat Orc {1}
+Black Crayon Goblin {1}
+Black Crayon Golem {1}
+Black Crayon Hippy {1}
+Black Crayon Man {2}
+Black Crayon Mer-kin {1}
+Black Crayon Pirate {1}
+Black Crayon Shambling Monstrosity {1}
+Black Crayon Spiraling Shape {1}
+Black Crayon Undead Thing {3}
+=================================

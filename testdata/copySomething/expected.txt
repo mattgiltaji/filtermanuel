@@ -1,0 +1,11 @@
+=================================
+[Black Crayon]
+Black Crayon Beast {3}
+Black Crayon Constellation {1}
+Black Crayon Crimbo Elf {1}
+Black Crayon Demon {1}
+Black Crayon Elemental {2}
+Black Crayon Fish {1}
+Black Crayon Flower {1}
+Black Crayon Frat Orc {1}
+=================================

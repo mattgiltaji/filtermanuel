@@ -1,0 +1,12 @@
+death ray in a pear tree {3}
+turtle mech {1}
+Swiss hen {3}
+killing bird {2}
+golden ring {2}
+goose a-laying {2}
+swarm a-swarming {3}
+blade a-spinning {1}
+laser lancing {2}
+borg a-beeping {2}
+strangler strangling {3}
+stomper stomping {2}
