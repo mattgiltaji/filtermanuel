@@ -20,9 +20,9 @@ var (
 
 func init() {
 	const (
-		manuelUsage = "path to the file of output from missingManuel.ash"
-		faxbotUsage = "path to the file of monsters available in the faxbot"
-		outputUsage = "path to the missing manuel output file"
+		manuelUsage = "path to the missingManuel.ash data file"
+		faxbotUsage = "path to the faxbot data file"
+		outputUsage = "path to where the output data should be written"
 	)
 	var (
 		defaultDir    = filepath.Clean(`C:\Users\admin\Desktop\kolmafia\samples`)
