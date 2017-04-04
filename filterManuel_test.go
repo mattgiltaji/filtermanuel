@@ -25,6 +25,7 @@ func TestFilterManuel(t *testing.T) {
 			t.Fatalf("Could not create temp output file. Error: %v", err)
 		}
 		defer os.Remove(gotFile.Name())
+
 		manuelFile := filepath.Join(c, "manuel.txt")
 		faxbotFile := filepath.Join(c, "faxbot.txt")
 		expectedFile := filepath.Join(c, "expected.txt")
@@ -39,8 +40,9 @@ func TestFilterManuel(t *testing.T) {
 		if err != nil {
 			t.Fatalf("Could not read %v. Error: %v", gotFile.Name(), err)
 		}
+		defer gotFile.Close()
 		if string(expectedContents) != string(gotContents) {
-			t.Errorf("filterManuel(%v, %v, %v) == '%v', want '%v'", manuelFile, faxbotFile,
+			t.Errorf("filterManuel(%v, %v, %v), == '%v', want '%v'", manuelFile, faxbotFile,
 				gotFile.Name(), string(gotContents), string(expectedContents))
 		}
 

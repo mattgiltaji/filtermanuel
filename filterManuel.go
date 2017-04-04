@@ -2,11 +2,13 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"flag"
 	"log"
 	"os"
 	"path/filepath"
 	"regexp"
+	"strings"
 )
 
 var (
@@ -53,7 +55,23 @@ func filterManuel(manuelPath, faxbotPath, outputPath string) {
 	defer manuelFile.Close()
 	manuel := bufio.NewScanner(manuelFile)
 
-	faxbotMonsters := getFaxbotData(faxbotPath)
+	faxbotMonsters := readFaxbotDataFromFile(faxbotPath)
+
+	firstPassOutput := bytes.Buffer{}
+
+	newLine := ""
+	for manuel.Scan() {
+		line := manuel.Text()
+		if shouldCopy(line, faxbotMonsters) {
+			_, err := firstPassOutput.WriteString(newLine + line)
+			if err != nil {
+				log.Fatal(err)
+			}
+			newLine = "\r\n"
+		}
+	}
+
+	secondPassOutput := removeBlankAreas(bufio.NewScanner(&firstPassOutput))
 
 	outputFile, err := os.Create(outputPath)
 	if err != nil {
@@ -62,21 +80,12 @@ func filterManuel(manuelPath, faxbotPath, outputPath string) {
 	defer outputFile.Close()
 	output := bufio.NewWriter(outputFile)
 	defer output.Flush()
-	newLine := ""
-	for manuel.Scan() {
-		line := manuel.Text()
-		if shouldCopy(line, faxbotMonsters) {
-			_, err := output.WriteString(newLine + line)
-			if err != nil {
-				log.Fatal(err)
-			}
-			newLine = "\r\n"
-		}
-	}
-	//read from output, filter through removeBlankAreas() and write it out again
+
+	output.WriteString(strings.Join(secondPassOutput, ""))
+
 }
 
-func getFaxbotData(faxbotPath string) (faxbotData map[string]struct{}) {
+func readFaxbotDataFromFile(faxbotPath string) (faxbotData map[string]struct{}) {
 	faxbotFile, err := os.Open(faxbotPath)
 	if err != nil {
 		log.Fatal(err)
