@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"io/ioutil"
+	"log"
 	"os"
 	"path/filepath"
 	"runtime"
@@ -11,8 +12,26 @@ import (
 	"testing"
 )
 
+func BenchmarkFilterManuel(b *testing.B) {
+	c := filepath.Join(getTestDataDir(), "fullTest")
+	manuelFile := filepath.Join(c, "manuel.txt")
+	faxbotFile := filepath.Join(c, "faxbot.txt")
+
+	gotFile, err := ioutil.TempFile("", "filtered_manuel")
+	if err != nil {
+		b.Fatalf("Could not create temp output file. Error: %v", err)
+	}
+	defer os.Remove(gotFile.Name())
+	for i := 0; i < b.N; i++ {
+		err := filterManuel(manuelFile, faxbotFile, gotFile.Name())
+		if err != nil {
+			b.Fatalf("Error running filterManuel. Error: %v", err)
+		}
+	}
+}
+
 func TestFilterManuel(t *testing.T) {
-	testDataDir := getTestDataDir(t)
+	testDataDir := getTestDataDir()
 	cases := []string{
 		filepath.Join(testDataDir, "copyEverything"),
 		filepath.Join(testDataDir, "copyNothing"),
@@ -30,7 +49,10 @@ func TestFilterManuel(t *testing.T) {
 		faxbotFile := filepath.Join(c, "faxbot.txt")
 		expectedFile := filepath.Join(c, "expected.txt")
 
-		filterManuel(manuelFile, faxbotFile, gotFile.Name())
+		err = filterManuel(manuelFile, faxbotFile, gotFile.Name())
+		if err != nil {
+			t.Fatalf("Error running filterManuel for %v. Error: %v", expectedFile, err)
+		}
 
 		expectedContents, err := ioutil.ReadFile(expectedFile)
 		if err != nil {
@@ -115,7 +137,7 @@ func TestShouldCopy(t *testing.T) {
 }
 
 func TestRemoveBlankAreas(t *testing.T) {
-	testDataDir := getTestDataDir(t)
+	testDataDir := getTestDataDir()
 	cases := []string{
 		filepath.Join(testDataDir, "removeEverything"),
 		filepath.Join(testDataDir, "removeNothing"),
@@ -152,15 +174,15 @@ func TestRemoveBlankAreas(t *testing.T) {
 	}
 }
 
-func getTestDataDir(t *testing.T) (testDataDir string) {
+func getTestDataDir() (testDataDir string) {
 	_, thisFile, _, ok := runtime.Caller(0)
 	if !ok {
-		t.Fatalf("Unable to determine runtime file location.")
+		log.Fatal("Unable to determine runtime file location.")
 	}
 	thisDir := filepath.Dir(thisFile)
 	testDataDir, err := filepath.Abs(filepath.Join(thisDir, "testdata"))
 	if err != nil {
-		t.Fatalf("Unable to find testdata directory. Err: %v", err)
+		log.Fatalf("Unable to find testdata directory. Err: %v", err)
 	}
 	return
 }

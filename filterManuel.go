@@ -46,11 +46,12 @@ func main() {
 	filterManuel(manuelFilePath, faxbotFilePath, outputFilePath)
 }
 
-func filterManuel(manuelPath, faxbotPath, outputPath string) {
+func filterManuel(manuelPath, faxbotPath, outputPath string) (err error) {
 	//todo: read and prep manuel and faxbox in parallel
 	manuelFile, err := os.Open(manuelPath)
 	if err != nil {
 		log.Fatal(err)
+		return
 	}
 	defer manuelFile.Close()
 	manuel := bufio.NewScanner(manuelFile)
@@ -63,9 +64,10 @@ func filterManuel(manuelPath, faxbotPath, outputPath string) {
 	for manuel.Scan() {
 		line := manuel.Text()
 		if shouldCopy(line, faxbotMonsters) {
-			_, err := firstPassOutput.WriteString(newLine + line)
+			_, err = firstPassOutput.WriteString(newLine + line)
 			if err != nil {
 				log.Fatal(err)
+				return
 			}
 			newLine = "\r\n"
 		}
@@ -76,12 +78,14 @@ func filterManuel(manuelPath, faxbotPath, outputPath string) {
 	outputFile, err := os.Create(outputPath)
 	if err != nil {
 		log.Fatal(err)
+		return
 	}
 	defer outputFile.Close()
 	output := bufio.NewWriter(outputFile)
 	defer output.Flush()
 
 	output.WriteString(strings.Join(secondPassOutput, ""))
+	return nil
 
 }
 
