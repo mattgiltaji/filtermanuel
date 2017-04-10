@@ -22,6 +22,7 @@ func BenchmarkFilterManuel(b *testing.B) {
 		b.Fatalf("Could not create temp output file. Error: %v", err)
 	}
 	defer os.Remove(gotFile.Name())
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		err := filterManuel(manuelFile, faxbotFile, gotFile.Name())
 		if err != nil {
