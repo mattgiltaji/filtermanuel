@@ -8,7 +8,7 @@ import (
 	"os"
 	"path/filepath"
 	"runtime"
-	"strings"
+	"sync"
 	"testing"
 )
 
@@ -147,31 +147,57 @@ func TestRemoveBlankAreas(t *testing.T) {
 	for _, c := range cases {
 		toFilterFile := filepath.Join(c, "contents.txt")
 		wantFile := filepath.Join(c, "wanted.txt")
+		toFilterChan := make(chan string)
+		wantChan := make(chan string)
+		gotChan := make(chan string)
+		var wg = sync.WaitGroup{}
 
-		toFilterContents, err := ioutil.ReadFile(toFilterFile)
-		if err != nil {
-			t.Fatalf("Could not read %v. Error: %v", toFilterFile, err)
-		}
-		wantContents, err := ioutil.ReadFile(wantFile)
-		if err != nil {
-			t.Fatalf("Could not read %v. Error: %v", wantFile, err)
-		}
-		toFilter := bufio.NewScanner(bytes.NewReader(toFilterContents))
-		want := bufio.NewScanner(bytes.NewReader(wantContents))
-
-		gotRaw := removeBlankAreas(toFilter)
-		got := bufio.NewScanner(strings.NewReader(strings.Join(gotRaw, "")))
-		i := 1
-		for want.Scan() && got.Scan() {
-			wantLine := want.Text()
-			gotLine := got.Text()
-			if wantLine != gotLine {
-				t.Errorf("line %v of removeBlankAreas(%v) == '%v', want '%v'", i, toFilterFile, gotLine, wantLine)
-				break
+		go func() {
+			toFilterContents, err := ioutil.ReadFile(toFilterFile)
+			if err != nil {
+				t.Fatalf("Could not read %v. Error: %v", toFilterFile, err)
 			}
-			i++
-		}
+			toFilter := bufio.NewScanner(bytes.NewReader(toFilterContents))
+			for toFilter.Scan() {
+				toFilterChan <- toFilter.Text()
+			}
+			close(toFilterChan)
+			wg.Done()
+		}()
+		wg.Add(1)
 
+		go func() {
+			wantContents, err := ioutil.ReadFile(wantFile)
+			if err != nil {
+				t.Fatalf("Could not read %v. Error: %v", wantFile, err)
+			}
+			want := bufio.NewScanner(bytes.NewReader(wantContents))
+			for want.Scan() {
+				wantChan <- want.Text()
+			}
+			close(wantChan)
+			wg.Done()
+		}()
+		wg.Add(1)
+
+		go removeBlankAreas(toFilterChan, gotChan)
+		go func() {
+			i := 1
+			wantLine, wantOK := <-wantChan
+			gotLine, gotOK := <-wantChan
+			for wantOK || gotOK {
+				if wantLine != gotLine {
+					t.Errorf("line %v of removeBlankAreas(%v) == '%v', want '%v'", i, toFilterFile, gotLine, wantLine)
+					break
+				}
+				wantLine, wantOK = <-wantChan
+				gotLine, gotOK = <-wantChan
+				i++
+			}
+			wg.Done()
+		}()
+		wg.Add(1)
+		wg.Wait()
 	}
 }
 

@@ -2,13 +2,11 @@ package main
 
 import (
 	"bufio"
-	"bytes"
 	"flag"
 	"log"
 	"os"
 	"path/filepath"
 	"regexp"
-	"strings"
 )
 
 var (
@@ -47,33 +45,18 @@ func main() {
 }
 
 func filterManuel(manuelPath, faxbotPath, outputPath string) (err error) {
+	manuelLines := make(chan string)
+	faxbotMonsters := make(chan map[string]struct{})
+	firstPassOutput := make(chan string)
+	secondPassOutput := make(chan string)
+
 	//todo: read and prep manuel and faxbox in parallel
-	manuelFile, err := os.Open(manuelPath)
-	if err != nil {
-		log.Fatal(err)
-		return
-	}
-	defer manuelFile.Close()
-	manuel := bufio.NewScanner(manuelFile)
 
-	faxbotMonsters := readFaxbotDataFromFile(faxbotPath)
+	go readFaxbotDataFromFile(faxbotPath, faxbotMonsters)
+	go readManuelDataFromFile(manuelPath, manuelLines)
 
-	firstPassOutput := bytes.Buffer{}
-
-	newLine := ""
-	for manuel.Scan() {
-		line := manuel.Text()
-		if shouldCopy(line, faxbotMonsters) {
-			_, err = firstPassOutput.WriteString(newLine + line)
-			if err != nil {
-				log.Fatal(err)
-				return
-			}
-			newLine = "\r\n"
-		}
-	}
-
-	secondPassOutput := removeBlankAreas(bufio.NewScanner(&firstPassOutput))
+	go filterThroughFaxbot(manuelLines, faxbotMonsters, firstPassOutput)
+	go removeBlankAreas(firstPassOutput, secondPassOutput)
 
 	outputFile, err := os.Create(outputPath)
 	if err != nil {
@@ -84,24 +67,55 @@ func filterManuel(manuelPath, faxbotPath, outputPath string) (err error) {
 	output := bufio.NewWriter(outputFile)
 	defer output.Flush()
 
-	output.WriteString(strings.Join(secondPassOutput, ""))
+	for line := range secondPassOutput {
+		output.WriteString(line)
+	}
 	return nil
 
 }
 
-func readFaxbotDataFromFile(faxbotPath string) (faxbotData map[string]struct{}) {
+func readManuelDataFromFile(manuelPath string, dataChannel chan string) {
+	manuelFile, err := os.Open(manuelPath)
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+	defer manuelFile.Close()
+	manuel := bufio.NewScanner(manuelFile)
+	for manuel.Scan() {
+		dataChannel <- manuel.Text()
+	}
+	close(dataChannel)
+}
+
+func readFaxbotDataFromFile(faxbotPath string, dataChannel chan map[string]struct{}) {
 	faxbotFile, err := os.Open(faxbotPath)
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer faxbotFile.Close()
 	faxbot := bufio.NewScanner(faxbotFile)
-	faxbotData = make(map[string]struct{})
+	faxbotData := make(map[string]struct{})
 
 	for faxbot.Scan() {
 		faxbotData[faxbot.Text()] = struct{}{}
 	}
-	return
+
+	dataChannel <- faxbotData
+	close(dataChannel)
+}
+
+func filterThroughFaxbot(manuelChannel chan string, faxbotChannel chan map[string]struct{}, outputChannel chan string) {
+
+	faxbotMonsters := <-faxbotChannel
+	newLine := ""
+	for line := range manuelChannel {
+		if shouldCopy(line, faxbotMonsters) {
+			outputChannel <- string(newLine + line)
+			newLine = "\r\n"
+		}
+	}
+	close(outputChannel)
 }
 
 func shouldCopy(s string, allowed map[string]struct{}) bool {
@@ -131,24 +145,24 @@ func isInAllowedSet(s string, allowed map[string]struct{}) bool {
 	return ok
 }
 
-func removeBlankAreas(contents *bufio.Scanner) (filtered []string) {
+func removeBlankAreas(dataChannel, outputChannel chan string) {
 	newLine := ""
-	for contents.Scan() {
-		line := contents.Text()
+	nextLine := ""
+	line, ok := <-dataChannel
+	for ok {
 		if isSectionHeader(line) {
-			contents.Scan()
-			nextLine := contents.Text()
+			nextLine, ok = <-dataChannel
 			if isSectionSeparator(nextLine) {
 				continue
 			} else {
-				filtered = append(filtered, newLine+line)
+				outputChannel <- string(newLine + line)
 				newLine = "\r\n"
-				filtered = append(filtered, newLine+nextLine)
+				outputChannel <- string(newLine + nextLine)
 			}
 		} else {
-			filtered = append(filtered, newLine+line)
+			outputChannel <- string(newLine + line)
 			newLine = "\r\n"
 		}
 	}
-	return
+	close(outputChannel)
 }
